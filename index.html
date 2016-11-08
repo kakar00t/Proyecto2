@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Menu aplicacion</title>
+<meta name="viewport" content="width=device-width"/>
+<!--<script src="jquery-mobile/jquery-1.8.3.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.1.min.js"></script>
+<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.3.1.min.css">
+<link rel="stylesheet" href="css/estilos.css" />-->
+
+<!-- FUNCIONA LOS ALER Y LOS ENVIO DE DATOS CURSO ..ICONOS SE VEN MAL
+<script src="jquery-mobile/jquery-1.8.3.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.1.min.js"></script>
+<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.3.1.min.css">-->
+
+<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0.min.js"></script>
+<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0.min.css">
+<link rel="stylesheet" href="css/estilos.css" />
+
+<!--<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+<link href="jquery-mobile/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>-->
+
+<link rel="stylesheet" href="css/estilos.css" />
+<script src="cordova.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/RSS2.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</head>
+<body >
+<div data-role="page" id="page" >
+	<div  align="center"> <a href="#MENU"  data-transition="fade" id='Logo' > <img src="imagenes/splash.jpg" data-role="button"  /> </a> </div>
+</div>
+<!--   PAGINA DE LAS NOTICIAS rrs2 -->
+<div data-role="page" id="CONTENIDO_FEEDS">
+	<div data-role="header" >
+		<h1></h1>
+	</div>
+	<div data-role="content" id="entryText"> </div>
+</div>
+
+<!--    MENU PRINCIPAL   -->
+<div data-role="page" id="MENU" data-theme="c" >
+	<div data-role="header">
+		<h1>Infórmate y Actualízate 2 </h1>
+	</div>
+	<div data-role="content" id="sitio">
+		<div id='Logo' align="center"> <img src='imagenes/Lo.png'  > </div>
+		<div id='banner' align="center"> <img  src='imagenes/boletin.png'   > </div>
+		
+		<!--  espacio de noticias -->
+		<div id="status">
+			<ul id="linksList" data-role="listview" data-inset="true">
+			</ul>
+		</div>
+		<!--  fin de las noticias rss --> 
+	</div>
+	<div  data-role="footer" data-position="fixed"    data-theme="b">
+		<div data-role="navbar"  data-iconpos="top" >
+			<ul>
+				<li><a href="#Login" data-role="button"  data-icon="forward"  data-transition="slide"  >Portafolio</a></li>
+				<li><a href="#DOCENCIA" data-role="button" data-icon="info" data-transition="slide" >Docencia</a></li>
+				<li ><a href="#TWITTER" data-role="button" id="B_twitter" data-icon="custom"  data-transition="slide">Inf pucv</a></li>
+				<li><a href="#DIRECTORIO" data-role="button" data-icon="info" data-transition="slide" >Directorio</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- --------    FIN MENU PRINCIPAL ---------- --> 
+<!------------------   LOGIN PORTAFOLIO    ---------------------->
+
+<div data-role="page" id="Login" data-theme="d" >
+	<div data-role="header" data-theme="b"> <a href="#MENU" data-role="button"  data-icon="home"  data-theme="b" >Inicio</a>
+		<h1>Portafolio</h1>
+	</div>
+	<div data-role="content"  >
+		<div id='Logo' align="center"> <img src='imagenes/Lo.png'  > </div>
+		<br>
+		
+		<!-- Formulario de Login Portafolio -->
+		<div class="ui-body ui-body-c ui-corner-all" >
+			<input type="text"      id="rut"  placeholder="Rut" >
+			<input type="password"  id="pass" placeholder="Contraseña" >
+			<a href="#soon" data-rel="dialog" data-role="button" >Acceder</a> </div>
+	</div>
+	<div  data-role="footer" data-position="fixed"    data-theme="b">
+		<h1 >
+			<p>2014</p>
+		</h1>
+	</div>
+</div>
+<div data-role="dialog" id="soon" >
+	<div data-role="header" >
+		<h1>Portafolio</h1>
+	</div>
+	<div data-role="content" >
+		<p>Opción disponible en futuras versiones
+		<p> 
+	</div>
+</div>
+
+<!--  PAGINA DIRECTORIO  PAGINA DIRECTORIO  PAGINA DIRECTORIO  PAGINA DIRECTORIO   -->
+
+<div data-role="page" id="DIRECTORIO" data-theme="c">
+	<div data-role="header"> <a href="#MENU" data-role="button"  data-icon="home" data-iconpos="left" data-theme="b">Inicio</a>
+		<h1> Directorio</h1>
+	</div>
+	<div data-role="content">
+		<div id='banner' align="center"> <img  src='imagenes/dir.png'   > </div>
+		<div data-collapsed="true"  data-role="collapsible" >
+			<h3 id="listar_profesores">Busca tus profesores </h3>
+			<ul data-role="listview" id="listaprofesores" data-filter="true">
+				<li data-role="list-divider" ><a >Despliega para actualizar datos</a></li>
+				<div data-role='collapsible' data-collapsed='true' data-content-theme='c' >
+					<h3>Broderick Crawford Labrin</h3>
+					<p>
+					<div id='avatarUs'><img src='imagenes/Contacto/56322273719.jpg' width='60' height='80'></div>
+					<div id='infoUs'>Cargo :  Secretario Académico<br>
+						Oficina :  IBC 3-23<br>
+						Telefono : <a href='tel:56322273719'>56322273719</a><br>
+						E-mail :<a href='mailto:broderick.crawford@ucv.cl'>broderick.crawford@ucv.cl</a><br>
+						Web : <a href='--' >--</a></div>
+					</p>
+				</div>
+				<div data-role='collapsible' data-collapsed='true' data-content-theme='c' >
+					<h3>Claudio Cubillos Figueroa</h3>
+					<p>
+					<div id='avatarUs'><img src='imagenes/Contacto/56322273764.jpg' width='60' height='80'></div>
+					<div id='infoUs'>Cargo :  Jefe de Asistencia Técnica y Capacitación<br>
+						Oficina :  IBC 3-19<br>
+						Telefono : <a href='tel:56322273764'>56322273764</a><br>
+						E-mail :<a href='mailto:claudio.cubillos@ucv.cl'>claudio.cubillos@ucv.cl</a><br>
+						Web : <a href='www.inf.ucv.cl/~ccubillos' >www.inf.ucv.cl/~ccubillos</a></div>
+					</p>
+				</div>
+				<div data-role='collapsible' data-collapsed='true' data-content-theme='c' >
+					<h3>Ivan Mercado Bermúdez</h3>
+					<p>
+					<div id='avatarUs'><img src='imagenes/Contacto/56322273658.jpg' width='60' height='80'></div>
+					<div id='infoUs'>Cargo :  Jefe de Docencia<br>
+						Oficina :  IBC 3-17<br>
+						Telefono : <a href='tel:56322273658'>56322273658</a><br>
+						E-mail :<a href='mailto:imercado@ucv.cl'>imercado@ucv.cl</a><br>
+						Web : <a href='--' >--</a></div>
+					</p>
+				</div>
+				<div data-role='collapsible' data-collapsed='true' data-content-theme='c' >
+					<h3>Nibaldo Rodriguez Agurto</h3>
+					<p>
+					<div id='avatarUs'><img src='imagenes/Contacto/56322274095.jpg' width='60' height='80'></div>
+					<div id='infoUs'>Cargo :  Jefe de Investigación<br>
+						Oficina :  IBC 3-24 <br>
+						Telefono : <a href='tel:56322274095'>56322274095</a><br>
+						E-mail :<a href='mailto:nibaldo.rodriguez@ucv.cl'>nibaldo.rodriguez@ucv.cl</a><br>
+						Web : <a href='--' >--</a></div>
+					</p>
+				</div>
+				<div data-role='collapsible' data-collapsed='true' data-content-theme='c' >
+					<h3>Silvana Roncagliolo de la Horra</h3>
+					<p>
+					<div id='avatarUs'><img src='imagenes/Contacto/56322273763.jpg' width='60' height='80'></div>
+					<div id='infoUs'>Cargo :  Directora<br>
+						Oficina :  IBC 3-18<br>
+						Telefono : <a href='tel:56322273763'>56322273763</a><br>
+						E-mail :<a href='mailto:silvana@ucv.cl'>silvana@ucv.cl</a><br>
+						Web : <a href='www.inf.ucv.cl/~silvana' >www.inf.ucv.cl/~silvana</a></div>
+					</p>
+				</div>
+			</ul>
+		</div>
+		
+		
+		
+<div  data-role="collapsible" data-collapsed="true" data-theme="c">
+			<h3 id="">Asignaturas Optativas </h3>
+			<ul data-role="listview" id="optativos" data-filter="true">
+		
+		
+		
+		
+<li data-role="list-divider" ><a >Despliega para actualizar datos</a></li>	
+<div data-role='collapsible' data-content-theme='c'>
+	<h3>Desarrollo de Aplicaciones con Java [OII407]</h3>
+	<div id='infoUs'>
+		<h1>Objetivos:</h1>
+		Aplicar correctamente los principios de la orientación a objeto en la tecnología Java.<br>
+		Proporcionar herramientas que permitan el desarrollo de aplicaciones escalables, robustas y fiables.<br>
+		<br>
+		<h2>Contenidos</h2>
+		1 Introducción.<br>
+		2 Lenguaje Java.<br>
+		3 Desarrollo Java.<br>
+		4 Desarrollo avanzado de Java.<br>
+	</div>
+</div>
+<div data-role='collapsible' data-content-theme='c'>
+	<h3>Diseño de Sistemas Seguros [OII413]</h3>
+	<div id='infoUs'>
+		<h1>Objetivos:</h1>
+		Dotar al alumno de elementos de juicios para poder implementar una solución de seguridad.<br>
+		Permitir al alumno el poder diferenciar entre distintos tipos de sistemas de seguridad aplicados a una red o un sistema informático.<br>
+		<br>
+		<h2>Contenidos</h2>
+		1 Seguridad de redes.<br>
+		2 infraestructuras de clave pública PKI.<br>
+		3 Seguridad de Sistemas Operativos.<br>
+		4 Aspectos de seguridad en las aplicaciones.<br>
+	</div>
+</div>
+<div data-role='collapsible' data-content-theme='c'>
+	<h3>English for Computing Work [OII400]</h3>
+	<div id='infoUs'>
+		<h1>Objetivos:</h1>
+		Ayudar a los alumnos a tener conversaciones básicas en inglés.<br>
+		Ayudar a los alumnos a poder manejarse en cuando se encuentren en situaciones donde deban usar el idioma.<br>
+		<br>
+		<h2>Contenidos</h2>
+		1 Introduce yourself.<br>
+		2 Write and analize.<br>
+		3 Present a proyect.<br>
+		4 writing dialogues.<br>
+		5 Read and talk.<br>
+		6 How to make a resume.<br>
+		7 Air travel and getting lost.<br>
+		8 Games.<br>
+		9 Reading companion.<br>
+	</div>
+</div>
+<div data-role='collapsible' data-content-theme='c'>
+	<h3>Ingeniería de Usabilidad [OII412]</h3>
+	<div id='infoUs'>
+		<h1>Objetivos:</h1>
+		Comprender la importancia de la usabilidad y sus características.<br>
+		Comprender las etapas del ciclo de vida en ingeniería de la usabilidad.<br>
+		Aplicar los métodos de la investigación cualitativas en el desarrollo de software.<br>
+		Aplicar las técnicas de diseño de la experiencia de los usuarios.<br>
+		<br>
+		<h2>Contenidos</h2>
+		1 Introducción a la ingeniería de la usabilidad.<br>
+		2 Inspecciones de usabilidad.<br>
+		3 Pruebas de Usabilidad.<br>
+		4 La experiencia del usuario.<br>
+	</div>
+</div>
+<div data-role='collapsible' data-content-theme='c'>
+	<h3>Redes Neuronales Artificiales [OII414]</h3>
+	<div id='infoUs'>
+		<h1>Objetivos:</h1>
+		Diseñar la topología de un modelo neuronal.<br>
+		Estimar los parámetros de un modelo neuronal.<br>
+		Implementar y evaluar el rendimiento de un modelo neuronal.<br>
+		<br>
+		<h2>Contenidos</h2>
+		1 Introducción.<br>
+		2 Red neuronal feedforward.<br>
+		3 Algoritmo de aprendizaje basado en la derivada.<br>
+		4 Red neuronal recurrente.<br>
+		5 Algoritmo de aprendizaje basado en enjambre de partículas.<br>
+		6 Estimación de parámetros usando Algoritmos Híbridos.<br>
+	</div>
+</div>
+<div data-role='collapsible' data-content-theme='c'>
+	<h3>Taller de desarrollo de Sistemas [OII471]</h3>
+	<div id='infoUs'>
+		<h1>Objetivos:</h1>
+		Cada alumno debe comprender la importancia de la gestión del proyecto.<br>
+		Cada alumno deber ser capaz de comunicarse con los otros miembros de  su grupo.<br>
+		El grupo de trabajo se debe tener en cuenta la calidad del software y su confiabilidad.<br>
+		<br>
+		<h2>Contenidos</h2>
+		1 Introducción a los proyectos de software.<br>
+		2 Ciclo de vida de los proyectos de software.<br>
+		3 Planificación de proyectos de software.<br>
+		4 Taller de casos de proyectos de software.<br>
+		5 Gestión del personal.<br>
+		6 Estimación y estudio de viabilidad del proyecto de software.<br>
+		7 Análisis de riesgo de proyectos de software.<br>
+		8 Planificación para la recuperación del proyecto de software.<br>
+		9 Control del proyecto de software.<br>
+	</div>
+</div>
+<div data-role='collapsible' data-content-theme='c'>
+	<h3>Taller de programación de dispositivos móviles [OII403]</h3>
+	<div id='infoUs'>
+		<h1>Objetivos:</h1>
+		Introducir y profundizar los conceptos asociados al desarrollo de aplicaciones para pequeños dispositivos.<br>
+		Estudio y aplicación de configuraciones y perfiles de J2ME.<br>
+		Estudio y aplicación de la plataforma NET CF.<br>
+		<br>
+		<h2>Contenidos</h2>
+		1 Introducción a la programación de dispositivos móviles.<br>
+		2 Limitaciones de los dispositivos móviles.<br>
+		3 Sistemas operativos móviles.<br>
+		4 Desarrollo de aplicaciones móviles.<br>
+		5 Java 2 Mobile Edition.<br>
+		6 .<br>
+		NET Compact Framework.<br>
+	</div>
+</div>
+		
+		</ul>
+		</div>
+		
+		
+		
+		
+		
+	</div>
+	<div  data-role="footer" data-position="fixed"    data-theme="b">
+		<div data-role="navbar"  data-iconpos="top" >
+			<ul>
+				<li><a href="#Login" data-role="button"  data-icon="forward"  data-transition="slide"  >Portafolio</a></li>
+				<li><a href="#DOCENCIA" data-role="button" data-icon="info" data-transition="slide" >Docencia</a></li>
+				<li ><a href="#TWITTER" data-role="button" id="B_twitter" data-icon="custom"  data-transition="slide">Inf pucv</a></li>
+				<li><a href="#DIRECTORIO" data-role="button" data-icon="info" data-transition="slide" >Directorio</a></li>
+				<li><a href="#INFO" data-icon="info" data-iconpos="notext" >Credits</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--  FIN directorio   --> 
+
+<!--               Pag twitter                -->
+
+<div data-role="page" id="TWITTER" >
+	<div data-role="header" data-theme="b"> <a href="#MENU" data-role="button"  data-icon="home" data-iconpos="left" data-theme="b">Inicio</a>
+		<h1> Twitter </h1>
+	</div>
+	<div id="centro_twitter" ><a class="twitter-timeline" href="https://twitter.com/secdocinfpucv" data-widget-id="511044525901352960">Tweets por @secdocinfpucv</a> 
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+	<div  data-role="footer" data-position="fixed"    data-theme="b">
+		<div data-role="navbar"  data-iconpos="top" >
+			<ul>
+				<li><a href="#Login" data-role="button"  data-icon="forward"  data-transition="slide"  >Portafolio</a></li>
+				<li><a href="#DOCENCIA" data-role="button" data-icon="info" data-transition="slide" >Docencia</a></li>
+				<li ><a href="#TWITTER" data-role="button" id="B_twitter" data-icon="custom"  data-transition="slide">Inf pucv</a></li>
+				<li><a href="#DIRECTORIO" data-role="button" data-icon="info" data-transition="slide" >Directorio</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--  FIN TWITTER    --> 
+
+<!--  PAGINA DOCENCIA   -->
+<div data-role="page" id="DOCENCIA" data-theme="c">
+	<div data-role="header"> <a href="#MENU" data-role="button"  data-icon="home" data-iconpos="left" data-theme="b">Inicio</a>
+		<h1> Docencia </h1>
+	</div>
+	<div data-role="content">
+		<div id='banner' align="center"> <img  src='imagenes/d.png'   > </div>
+		<div data-role="collapsible" data-collapsed="false" data-content-theme="d">
+			<h3>Postulaciones </h3>
+			<ul data-role="listview">
+				<li><a href="#D_1" data-transition="slide">Vias de ingreso</a></li>
+				<li><a href="#D_2" data-transition="slide">Alumnos Proyecto</a></li>
+				<li><a href="#D_3" data-transition="slide">Documentos</a></li>
+				<li><a href="#D_4" data-transition="slide">Alumnos de Primer Año</a></li>
+			</ul>
+		</div>
+		<div data-role="collapsible" data-collapsed="false" data-content-theme="d"  >
+			<h3>Diplomado </h3>
+			<h3>DIPLOMADO GESTIÓN DE RIESGOS EN TI</h3>
+			<p>Con la amplia experiencia de Deloitte y la larga tradición académica de la Pontificia Universidad Católica de Valparaíso se ha construido el Diplomado Gestión de Riesgos             en Tecnologías de Información, que unifica teoría y práctica             en un formato que permite aplicar las buenas prácticas de             una forma pragmática.</p>
+			<p>El             diplomado tiene un enfoque multidisciplinario e integrador,             por lo que está dirigido a profesionales y ejecutivos de             diversa formación y experiencia previa, que son o serán             responsables por la gestión del riesgo de un proyecto, área,             o toda la organización de TI, independiente de la industria             a la que pertenece.</p>
+			<p>El             Plan de estudios considera un total de 100 horas, con los             siguientes módulos:</p>
+			<p>Módulo             1: Gestión de Riesgos (Duración 12 horas)</p>
+			<p>Módulo             2: Gobierno TI (Duración: 12 horas)</p>
+			<p>Módulo             3: Seguridad de la Información (Duración 16 horas)</p>
+			<p>Módulo             4: Continuidad del Negocio (Duración 16 horas)</p>
+			<p>Módulo             5: Gestión de Cambios (Duración: 12 horas)</p>
+			<p>Módulo             6: Gestión de Proveedores (Duración: 12 horas)</p>
+			<p>Módulo             7: Taller de Estándares y Prácticas (Duración: 16 horas)</p>
+			<p>Otros:             Introducción, Examen Final, Cierre (Duración: 4 horas)</p>
+			<a href="mailto:jdoe@foo.com" class="ui-link-inherit"> Contacto: mailto:jdoe@foo.com</a> </div>
+	</div>
+	<div  data-role="footer" data-position="fixed"    data-theme="b">
+		<div data-role="navbar"  data-iconpos="top" >
+			<ul>
+				<li><a href="#Login" data-role="button"  data-icon="forward"  data-transition="slide"  >Portafolio</a></li>
+				<li><a href="#DOCENCIA" data-role="button" data-icon="info" data-transition="slide" >Docencia</a></li>
+				<li ><a href="#TWITTER" data-role="button" id="B_twitter" data-icon="custom"  data-transition="slide">Inf pucv</a></li>
+				<li><a href="#DIRECTORIO" data-role="button" data-icon="info" data-transition="slide" >Directorio</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--  FIN DOCENCIA   -->
+
+<div data-role="page" id="D_1" >
+	<div data-role="header"> <a href="#DOCENCIA" data-role="button"  data-icon="back" data-iconpos="left" data-theme="b">Atras</a>
+		<h1>Docencia</h1>
+	</div>
+	<div  data-role="content" id="DIV" ><!-- MARGEN -->
+		<div class="entry-content" style="width:auto; ">
+			<table style="text-align: left;" border="0">
+				<tbody style="text-align: left;">
+					<tr style="padding-left: 60px; text-align: left;">
+						<td style="text-align: left;" scope="row" valign="top"><h3 style="visibility: visible;"><strong>GRADO</strong></h3>
+							<p>Licenciado en Ciencias <br>
+								de la Ingeniería</p></td>
+						<td style="text-align: left;">&nbsp;</td>
+						<td style="text-align: left;"><h3 style="visibility: visible;"><strong>TÍTULO </strong></h3>
+							<p style="text-align: left;">Ingeniero Civil Informática</p></td>
+						<td style="text-align: left;" valign="top">&nbsp;</td>
+						<td style="text-align: left;" valign="top"><h3 style="visibility: visible;"><span>MALLA</span> CURRICULAR</h3>
+							<h4 style="text-align: center;"><a onclick="Javascript:window.open('/images/stories/mallas/malla_ici.html','titulo','scrollbars=no,resizable=no,width=1024,height=550,top=85,left=140, right=300')" style="cursor: pointer;">Ver Malla</a></h4></td>
+					</tr>
+					<tr style="text-align: left;">
+						<td style="text-align: left;"><h3 style="visibility: visible;"><strong>PONDERACIÓN<br>
+								PSU</strong></h3>
+							<p>NEM: 10%<br>
+								Ranking: 10%<br>
+								Lenguaje y Comunciación: 30%<br>
+								Matemáticas: 40%<br>
+								Ciencias o Historia: 10%&nbsp;</p></td>
+						<td style="text-align: left;">&nbsp;</td>
+						<td style="text-align: left;"><h3 style="visibility: visible;"><strong>DURACIÓN</strong></h3>
+							<p>12 Semestres</p>
+							<br></td>
+						<td style="text-align: left;" valign="top"><br></td>
+						<td style="text-align: left;" valign="top"><h3 style="visibility: visible;"><strong>CÓDIGO </strong></h3>
+							<p>14064</p></td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 >PUNTAJE DE INGRESO DEL ÚLTIMO AÑO:</h3>
+			<table rules="all" frame="hsides" style="text-align: center; width: 100%; border: 1px solid #9f9f9f;" border="1" cellpadding="1" cellspacing="1">
+				<tbody style="text-align: left;">
+					<tr class="odd" style="text-align: left;">
+						<td style="text-align: center;"><strong>Año</strong></td>
+						<td style="text-align: right;"><strong>Puntaje Primer Matriculado</strong></td>
+						<td style="text-align: right;"><strong>Puntaje Último Matriculado</strong></td>
+					</tr>
+					<tr style="text-align: left;" class="even">
+						<td style="text-align: center;"><strong>2014</strong></td>
+						<td style="text-align: right;">818,20</td>
+						<td style="text-align: right;">588,10</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<h3 style="visibility: visible;">ACREDITACIÓN</h3>
+			<div>Carrera Acreditada por 5 años, desde el 2010 hasta 2015</div>
+			<h3 class="frasedestacada" style="visibility: visible;">PERFIL</h3>
+			<div style="text-align: justify;">El Ingeniero Civil en Informática es un <strong>profesional capacitado para identificar, definir y analizar problemas complejos de procesamiento de datos y generación de información, integrándose en equipos multidisciplinarios de trabajo</strong>. El profesional está preparado para diseñar soluciones innovadoras, que sirvan de manera eficaz y eficiente a resolver las necesidades operacionales y de gestión de la organización en la cual se desempeña.</div>
+			<div class="frasedestacada">
+				<h3 style="visibility: visible;"><span>CAMPO</span> OCUPACIONAL</h3>
+			</div>
+			<div style="text-align: justify;">El <strong>campo de acción del Ingeniero Civil en Informática se encuentra en</strong>: Unidades de informática y/o computación de medianas y grandes empresas productoras de bienes y servicios. Empresas del Sector Financiero, de Seguros y de Comunicaciones. Proyectos de ingeniería multidisciplinarios en el sector público y privado. Organismos de investigación y desarrollo en el área Informática. Empresas que desarrollen o comercialicen productos de hardware y/o software. Empresas consultoras y asesoras en Informática. Unidades Académicas vinculadas directa o indirectamente con la Informática en Instituciones de Educación Superior.</div>
+			<h3 style="text-align: justify; visibility: visible;"><span>AREAS</span> DE ESTUDIO</h3>
+			<div style="text-align: justify;"><strong>Eje de Formación Disciplinar: </strong>Contempla que el estudiante tenga sólidos conocimientos en las ciencias básicas y ciencias de la ingeniería los cuales constituyen el fundamento de toda su formación profesional, considerando para esto el desarrollo de competencias para gestionar de manera óptima los recursos organizacionales disponibles y de liderar equipos de trabajo.</div>
+			<div style="text-align: justify;"><strong>Eje de Formación Profesional: </strong>Se identifican los grandes lineamientos formativos de este futuro profesional, en lo que a su especialidad se refiere, los que consideran la adquisición de conocimientos, el desarrollo de habilidades y actitudes para entregar soluciones innovadoras a las necesidades que permitan contribuir con el desarrollo de la sociedad actual.</div>
+			<div style="text-align: justify;"><strong>Eje de Formación Fundamental: </strong>Se explícita la formación transversal de los futuros profesionales que considera en sí el desempeño del profesional, desde una perspectiva integral en todo el sentido de su palabra. Este eje formativo del perfil, complementa el desarrollo de los egresados, como personas y miembros activos de la sociedad involucrados en los problemas de ésta.</div>
+			<div style="text-align: justify;">El alumno realizará también dos prácticas profesionales para acercarse al mundo laboral y ganar experiencia en la resolución de problemas propios de la profesión. El título profesional se obtiene después de un examen que comprende la defensa de una Memoria de Título, la cual sintetiza los conocimientos del alumno en la resolución de un problema teórico o práctico de su futuro ámbito profesional. En el 9no semestre aprobado de la carrera el alumno puede iniciar nuestro Magíster en Ingeniería Informática, pudiendo finalizar ambos estudios de pregrado y postgrado conjuntamente al finalizar el 12vo semestre.</div>
+		</div>
+	</div>
+	<!-- FIN MARGEN--> 
+	
+</div>
+<!-- FIN PAGE-->
+
+<div data-role="page" id="D_2">
+	<div data-role="header"> <a href="#DOCENCIA" data-role="button"  data-icon="back" data-iconpos="left" data-theme="b">Atras</a>
+		<h1>Alumnos Proyecto</h1>
+	</div>
+	<div  data-role="content" id="DIV"><!-- MARGEN -->
+		<div id="misionvision"> <br>
+			<h2 class="heading">¿Sabías qué?</h2>
+			<p>Al completar el penúltimo año académico con todos los ramos de la malla aprobados puedes pre-inscribir proyecto con algún Profesor de la Escuela.</p>
+			<p>La pre-inscripción posee fechas destinadas aproximadamente tres semanas.</p>
+			<p>Que al inscribir proyecto cuentas con un Profesor guía y un Profesor Correferente.</p>
+			<p>Sabías que tu proyecto se divide en dos partes proyecto 1 y proyecto 2.</p>
+			<p>Existen formatos de entrega para los documentos que tienes que entregar.</p>
+			<p>Existe un reglamente de proyecto 1 y proyecto 2.</p>
+			<p>En proyecto 1 existen dos partes de evaluación una presentación de avance y final donde en el avance participan el Profesor guía y el Correferente, en la presentación final existe además un examinador invitado.</p>
+			<p>En el proyecto 2 existen tres etapas de evaluación avance, presentación del software y final. Todas forman parte de una sola nota.</p>
+		</div>
+	</div>
+	<!-- FIN MARGEN--> 
+	
+</div>
+<!-- FIN PAGE-->
+
+<div data-role="page" id="D_3">
+	<div data-role="header"> <a href="#DOCENCIA" data-role="button"  data-icon="back" data-iconpos="left" data-theme="b">Atras</a>
+		<h1>Docencia</h1>
+	</div>
+	<div  data-role="content" id="DIV"><!-- MARGEN -->
+		<div class="entry-content" style="width:auto; ">
+			<div id="misionvision"> <br>
+				<h2 class="heading">Documentos</h2>
+				<h3>Titulación</h3>
+				<table border="0">
+					<tbody>
+						<tr>
+							<td><ul>
+									<li>Etiqueta CD Ing. Civil Informática</li>
+								</ul></td>
+							<td><a title="Etiqueta CD Ing. Civil Informática" href="http://inf.ucv.cl/images/stories/Archivos/Documentos/ETIQUETA_CD_ING_CIVIL_INFORMATICA.doc" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/openofficeorg-writer.png" alt="application-word" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Etiqueta CD Ing. Ejec. Informática</li>
+								</ul></td>
+							<td><a title="Etiqueta CD Ing. Ejec. Informática" href="http://inf.ucv.cl/images/stories/Archivos/Documentos/ETIQUETA_CD_ING_EJECUCION_INFORMATICA.doc" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/openofficeorg-writer.png" alt="application-word" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Formulario Alumni</li>
+								</ul></td>
+							<td><a title="Formulario Alumni" href="http://inf.ucv.cl/images/stories/Archivos/Documentos/FORMULARIO_ALUMNI.doc" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/openofficeorg-writer.png" alt="application-word" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Formulario Antecedentes Personales Ing. Civil Informática</li>
+								</ul></td>
+							<td><a title="Formulario Antecedentes Personales Ing. Civil Informática" href="http://inf.ucv.cl/images/stories/Archivos/Documentos/FORMULARIO_ANTECEDENTES_PERSONALES_ING_CIVIL_INFORMATICA.doc" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/openofficeorg-writer.png" alt="application-word" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Formulario Antecedentes Personales Ing. Ejec. Informática</li>
+								</ul></td>
+							<td><a title="Formulario Antecedentes Personales Ing. Ejec. Informática" href="http://inf.ucv.cl/images/stories/Archivos/Documentos/FORMULARIO_ANTECEDENTES_PERSONALES_ING_EJECUCION_INFORMATICA.doc" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/openofficeorg-writer.png" alt="application-word" width="24" height="24"></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Licenciatura</h3>
+				<table border="0">
+					<tbody>
+						<tr>
+							<td><ul>
+									<li>Formulario Antecedentes Personales Licenciatura</li>
+								</ul></td>
+							<td><a title="Formulario de antecedentes personales licenciatura" href="http://inf.ucv.cl/images/stories/Archivos/Documentos/Formulario_antecedentes_personales_licenciatura.doc" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/openofficeorg-writer.png" alt="application-word" width="24" height="24"></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Manual de Escuela</h3>
+				<table border="0">
+					<tbody>
+						<tr>
+							<td><ul>
+									<li>Manual de Escuela – 2014</li>
+								</ul></td>
+							<td><a title="Manual de Escuela - 2014" href="http://inf.ucv.cl/images/stories/Archivos/Documentos/Manual_de_Escuela2014.pdf" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/application-pdf.png" alt="application-pdf" width="24" height="24"></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>&nbsp;</p>
+				<h3>Formato para Informes</h3>
+				<table border="0">
+					<tbody>
+						<tr>
+							<td><ul>
+									<li>Formato para Informes – 2010</li>
+								</ul></td>
+							<td><a title="Formato para Informes - 2010" href="http://inf.ucv.cl/images/stories/Archivos/Documentos/Formato_informes_Ing_Inf_2010.pdf" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/application-pdf.png" alt="application-pdf" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Template latex para Informes – 2010</li>
+								</ul></td>
+							<td><a title="Template latex para Informes - 2010" href="http://inf.ucv.cl/images/stories/Archivos/Documentos/Template-Proyecto.zip" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/zip.jpg" alt="zip" width="24" height="24"></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>&nbsp;</p>
+				<h3>Logos</h3>
+				<table border="0">
+					<tbody>
+						<tr>
+							<td><ul>
+									<li>Logo Escuela de Ingeniería Informática – 1 (JPG)</li>
+								</ul></td>
+							<td><a title="Logo" href="http://inf.ucv.cl/images/stories/Archivos/LOGOS/logo_escuela.jpg" target="_blank" class="hoverZoomLink"><img src="http://inf.ucv.cl/images/stories/Archivos/png.png" alt="application-pdf" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Logo Escuela de Ingeniería Informática – 2 (JPG)</li>
+								</ul></td>
+							<td><a title="Logo" href="http://inf.ucv.cl/images/stories/Archivos/LOGOS/adhesivo.jpg" target="_blank" class="hoverZoomLink"><img src="http://inf.ucv.cl/images/stories/Archivos/png.png" alt="application-pdf" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Logo Escuela de Ingeniería Informática – (PNG)</li>
+								</ul></td>
+							<td><a title="Logo" href="http://inf.ucv.cl/images/stories/Archivos/LOGOS/logo_escuela.png" target="_blank" class="hoverZoomLink"><img src="http://inf.ucv.cl/images/stories/Archivos/png.png" alt="application-pdf" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Logo Escuela de Ingeniería Informática – (AI)</li>
+								</ul></td>
+							<td><a title="Logo" href="http://inf.ucv.cl/images/stories/Archivos/LOGOS/logo_escuela.ai" target="_blank"><img src="http://inf.ucv.cl/images/stories/Archivos/ai.png" alt="application-pdf" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Logo Pontificia Universidad Católica de Valparaíso – (JPG)</li>
+								</ul></td>
+							<td><a title="Logo PUCV" href="http://inf.ucv.cl/images/stories/Archivos/LOGOS/lgcJPG.jpg" target="_blank" class="hoverZoomLink"><img src="http://inf.ucv.cl/images/stories/Archivos/png.png" alt="application-pdf" width="24" height="24"></a></td>
+						</tr>
+						<tr>
+							<td><ul>
+									<li>Logo Pontificia Universidad Católica de Valparaíso – (PNG)</li>
+								</ul></td>
+							<td><a title="Logo PUCV" href="http://inf.ucv.cl/images/stories/Archivos/LOGOS/lgc.png" target="_blank" class="hoverZoomLink"><img src="http://inf.ucv.cl/images/stories/Archivos/png.png" alt="application-pdf" width="24" height="24"></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>&nbsp;</p>
+				<p>(*) Presione sobre el icono&nbsp;<img src="http://inf.ucv.cl/images/stories/Archivos/application-pdf.png" alt="application-pdf" width="16" height="16">&nbsp;&nbsp;<img src="http://inf.ucv.cl/images/stories/Archivos/png.png" alt="application-pdf" width="16" height="16">&nbsp;&nbsp;<img src="http://inf.ucv.cl/images/stories/Archivos/ai.png" alt="application-pdf" width="16" height="16">&nbsp;para descargar cada documento.</p>
+			</div>
+		</div>
+	</div>
+	<!-- FIN MARGEN--> 
+	
+</div>
+<!-- FIN PAGE-->
+
+<div data-role="page" id="D_4">
+	<div data-role="header"> <a href="#DOCENCIA" data-role="button"  data-icon="back" data-iconpos="left" data-theme="b">Atras</a>
+		<h1>Docencia</h1>
+	</div>
+	<div  data-role="content" id="DIV"><!-- MARGEN -->
+		<div class="entry-content" style="width:auto; padding-left:15px; padding-right:15px;">
+			<div id="misionvision"> <br>
+				<h2 class="heading">¿Sabías qué?</h2>
+				<div id="opcionesdepagina">
+					<p align="justify">Sabías que existe un centro de estudiantes que debe representar tus ideas e inquietudes.</p>
+					<p>Sabias que es causal de eliminación de la carrera la reprobación de todos los ramos de primer semestre por segunda vez al finalizar el año académico (fuente art. 45 reglamento estudios generales).</p>
+					<div></div>
+					<div></div>
+					<p>La carrera posee una semana exclusivamente para ti. Generalmente se realiza la última semana de septiembre.</p>
+					<p align="justify">Sabías que el segundo semestre debes inscribir los ramos vía <a href="http://nave10.ucv.cl/" target="_blank">navegador académico</a>.</p>
+					<p align="justify">Sabías que existen campeonatos inter-carreras organizados por la universidad en las distintas disciplinas deportivas.</p>
+					<p align="justify">Sabías que existe una federación de estudiantes que te representa a nivel de Universidad.</p>
+					<p align="justify">En esta sección también encontrarás artículos que te permitirán desenvolverte dentro de la universidad, como el reglamento, beneficios, plano, entre otros.</p>
+					<p><a href="http://dae.ucv.cl/" target="_blank">Departamento Asuntos Estudiantiles</a> (DAE)</p>
+					<p><a href="http://ucv.altavoz.net/prontus_unidacad/site/edic/base/port/dider.html" target="_blank">Dirección de Deportes y Recreación</a></p>
+					<p><a href="http://www.ucv.cl/p1_rector/antialone.html?page=http://www.ucv.cl/p3_admision/site/pags/20090804171550.html" target="_blank">Reglamentos Pontificia Universidad Católica de Valparaíso</a></p>
+					<h3>Visítanos en:</h3>
+					<p><a href="https://www.facebook.com/pages/Escuela-de-Ingenier%C3%ADa-Inform%C3%A1tica-PUCV/338934402788671" target="_blank">Facebook</a></p>
+					<p>ir a <a href="https://www.facebook.com/pages/Escuela-de-Ingenier%C3%ADa-Inform%C3%A1tica-PUCV/338934402788671" target="_blank">Grupo Facebook</a></p>
+					<h3>Síguenos en:</h3>
+					<p><a href="https://twitter.com/secdocinfpucv" target="_blank">Twitter</a></p>
+					<p class="UIIntentionalStory_Message" data-ft="{&quot;type&quot;:&quot;msg&quot;}">ir a <a href="https://twitter.com/secdocinfpucv" target="_blank">twitter.com/secdocinfpucv</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- FIN MARGEN--> 
+	
+</div>
+<!-- FIN PAGE DOCENCIA-->
+
+<div id="INFO" data-role="dialog" >
+	<div data-role="header">
+		<h1> :: by K4k4r00t 2014 ::</h1>
+	</div>
+	<div id="content" data-role="content">
+		<div class="person"> <img  style="width:auto" src="imagenes/INFO.jpg"  />
+			<h2>Saludos</h2>
+			<p> Hola esta aplicación móvil se desarrolló durante el año 2014 como proyecto académico, si te gusta programar y necesitas referencias sobre esta aplicación no dudes en contactarme. </p>
+			<h2>Informaticapp</h2>
+			<p> Informaticapp  tiene por objetivo optimizar los procesos de comunicación entre el alumno y la institución. </p>
+			<h2>Contacto</h2>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="https://www.facebook.com/Informaticapp" target="_blank">Facebook</a></li>
+				<li><a href="mailto:zoneslotbite@gmail.com" >Email</a></li>
+			</ul>
+			<div align="center">
+				<h2>Comparte la aplicación</h2>
+				<a href="http://goo.gl/cISq2C" data-role="button" ><img  id="Logo" src="imagenes/dowloadtracker.jpg"  /></a> </div>
+		</div>
+		<div id="centro_twitter" >
+		<h2>@Informaticapp</h2><a class="twitter-timeline" href="https://twitter.com/Informaticapp" data-widget-id="542544845126905858">Tweets por el @Informaticapp.</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+	</div>
+</div>
+</body>
+</html>

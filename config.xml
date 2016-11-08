@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.Informaticapp"
+    version   = "1.0.0">
+<name>Informaticapp</name>
+<description>
+ GESTIÓN ACADÉMICA PARA LA ESCUELA DE INGENIERIA INFORMÁTICA
+</description>
+<author href="https://www.facebook.com/Informaticapp" email="vargasacevedocristian@gmail.com">
+Cristián Andrés Vargas Acevedo
+</author>
+<!--PERMISOS PARA UTILIDADES-->
+    <preference name="permissions" value="none" />
+    <preference name="phonegap-version" value="3.5.0" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+	
+    <preference name="android-minSdkVersion" value="10" />
+    <preference name="android-installLocation" value="preferExternal" /><!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+	
+    <gap:plugin name="org.apache.cordova.battery-status" />
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+	
+	
+    <access origin="*" />
+	
+	<feature name="http://api.phonegap.com/1.0/battery"/>
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<feature name="http://api.phonegap.com/1.0/contacts"/>
+	<feature name="http://api.phonegap.com/1.0/file"/>
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/media"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/notification"/> 
+
+          <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+    <icon src="images/drawable-ldpi/ic_launcher.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="images/drawable-mdpi/ic_launcher.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="images/drawable-hdpi/ic_launcher.png"   gap:platform="android"    gap:qualifier="hdpi" />  
+	<icon src="images/drawable-xhdpi/ic_launcher.png"  gap:platform="android"    gap:qualifier="xhdpi" /> 
+
+</widget>
