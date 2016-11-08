@@ -1,0 +1,338 @@
+#avatarUs {
+	display: inline-block;
+	width: auto;
+	border: 1px solid #2B95D3;
+	/* [disabled]border-spacing: 2px 22px; */
+	border-collapse: collapse;
+}
+#infoUs{
+	display: inline-block;
+	margin: 5px 5px 5px 25px;
+}
+.ui-h2{
+	align-items:center;
+}
+.ui-p{
+    color: #fff;
+}
+
+#DET_ASIG , #DET_ASIG2  {
+	background-image:url(../imagenes/asig.png)  ;
+	width:100% ;
+	background-size:cover;
+	font-size:18px;
+	font-family:Arial,sans-serif;
+	color:#FFF;
+	position:inherit;
+	text-align:center;
+}
+#DET_ASIG_P ,#DET_ASIG_P2  {
+	background:url("../imagenes/profe.png");
+	width:100% ;
+	background-size:cover;
+	font-size:18px;
+	font-family:Arial,sans-serif;
+	color:#FFF;
+	text-align:center;
+	
+}
+#BANNER_APP {
+	width:100% ;
+	background-size:cover;
+	font-size:18px;
+	font-family:Arial,sans-serif;
+	color:#FFF;
+	position:inherit;
+	text-align:center;
+	
+}
+
+.ui-page{  /* ajusta ancho al dispositivo cover  */ 
+	background: url("../images/f2.jpg") no-repeat  center center ;
+	min-height:100% ;
+	background-size:cover; 
+}
+
+#Porta.ui-page  { /* repite horizontal , escala vertical (contain)  */
+	background: url("../imagenes/portafolio.jpg") repeat-x ;
+	min-height:100%;
+	background-size:contain;
+	padding-bottom: 100px;
+}
+
+
+#Portafolio.ui-page  { /* repite horizontal , escala vertical (contain)  */
+	background: url("../imagenes/portafolio.jpg") no-repeat  center center ;
+	min-height:100% ;
+	background-size:cover; 
+}
+
+#MC_LISTA.ui-page,
+#MCA.ui-page, 
+#MCA_ACT.ui-page,
+#MCA_AVI.ui-page,
+#MCA_EVA.ui-page,
+#MCP.ui-page, 
+#MCP_ACT.ui-page,
+#MCP_AVI.ui-page,
+#MCP_EVA.ui-page
+{
+	background: url("../images/portafolio.png") repeat-x ;
+	min-height:100%;
+	background-size:contain;
+}
+
+
+.ui-header{
+	background: -webkit-linear-gradient(rgba(60, 60, 60, 0.79),rgba(51, 51, 51, 0.91)) !important;	
+	box-shadow:0px 0px 26px #000;
+    
+}
+.ui-footer{
+	background: -webkit-linear-gradient(rgba(60, 60, 60, 0.79),rgba(51, 51, 51, 0.91)) !important;	
+	box-shadow:0px 0px 26px #000;
+    
+}
+.ui-header h1{
+
+		background-size:31px 31px !important;
+		font-family:Arial,sans-serif;
+		margin:10px !important;
+		font-size:26px !important;
+		color:rgb(232, 232, 232); 
+		text-shadow: 1px 1px 1px #c7c7c7;
+	
+}
+
+.ui-footer h1{
+		background-size:20px 20px !important;
+		font-family:Arial,sans-serif;
+		margin:5px !important;
+		font-size:12px !important;
+		color:rgb(232, 232, 232); 
+		text-shadow: 1px 1px 1px #c7c7c
+}
+
+#Login .ui-header h1{
+        margin:10px 26px 10px 26px  !important;
+		background-image: url(../imagenes/ico/login.png) !important;
+		background-repeat:no-repeat !important;	
+        background-position: right;
+}
+#TWITTER .ui-header h1{
+        margin:10px 26px 10px 26px  !important;
+		background-image: url(../images/btn/t3.png) !important;
+		background-repeat:no-repeat !important;	
+        background-position: right;
+}
+
+/*
+#Login .ui-footer h1{
+        margin:3px 50px 0px 85px  !important;
+		background-image: url(../imagenes/ico/login.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: center;
+}
+*/
+
+
+#Portafolio .ui-footer h1{
+        margin:10px 0px 10px 10px  !important;
+        font-size:14px !important;
+}
+
+
+
+
+#MCA  .ui-header h1{
+        margin:10px 25px 10px 85px  !important;
+		background-image: url(../imagenes/ico/77.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: right;
+}
+#MCA_AVI  .ui-header h1{
+        margin:10px 25px 10px 85px  !important;
+		background-image: url(../imagenes/ico/77.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: right;
+}
+#MCA_EVA  .ui-header h1{
+        margin:10px 25px 10px 85px  !important;
+		background-image: url(../imagenes/ico/77.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: right;
+}
+#MCA_ACT  .ui-header h1{
+        margin:10px 25px 10px 85px  !important;
+		background-image: url(../imagenes/ico/77.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: right;
+}
+#MCP  .ui-header h1{
+        margin:10px 25px 10px 85px  !important;
+		background-image: url(../imagenes/ico/tt.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: right;
+}
+#MCP_ACT  .ui-header h1{
+        margin:10px 25px 10px 85px  !important;
+		background-image: url(../imagenes/ico/tt.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: right;
+}
+#MCP_AVI  .ui-header h1{
+        margin:10px 25px 10px 85px  !important;
+		background-image: url(../imagenes/ico/tt.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: right;
+}
+
+#MCP_EVA .ui-header h1{
+        margin:10px 25px 10px 85px  !important;
+		background-image: url(../imagenes/ico/tt.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: right;
+}
+#Portafolio.ui-header h1{
+        margin:10px 25px 10px 85px  !important;
+		background-image: url(../imagenes/ico/login.png) !important;
+		background-repeat:no-repeat !important;	
+		background-position: center;
+}
+
+
+#crear_evaluacion .ui-header h1{
+        margin:10px 30px 10px 30px  !important;
+		background-image: url(../imagenes/ico/2.png) !important;
+		background-repeat:no-repeat !important;	
+    	background-position: right;
+}
+#crear_actividad .ui-header h1{
+        margin:10px 30px 10px 30px  !important;
+		background-image: url(../imagenes/ico/a.png) !important;
+		background-repeat:no-repeat !important;	
+    	background-position: right;
+}
+#crear_aviso .ui-header h1{
+        margin:10px 30px 10px 30px  !important;
+		background-image: url(../imagenes/ico/9.png) !important;
+		background-repeat:no-repeat !important;	
+    	background-position: right;
+}
+#crear_asistencia .ui-header h1{
+        margin:10px 30px 10px 30px  !important;
+		background-image: url(../imagenes/ico/6.png) !important;
+		background-repeat:no-repeat !important;	
+    	background-position: right;
+}
+#DIRECTORIO .ui-header h1{
+        margin:10px 30px 10px 30px  !important;
+		background-image: url(../imagenes/ico/1.png) !important;
+		background-repeat:no-repeat !important;	
+    	background-position: right;
+}
+
+
+
+
+#DOCENCIA .ui-header h1{
+        margin:10px 26px 10px 26px  !important;
+		background-image: url(../imagenes/ico/r.png) !important;
+		background-repeat:no-repeat !important;	
+    background-position: right;
+}
+
+
+#MCP_ACT .ui-footer h1{
+        margin:3px 50px 0px 85px  !important;
+		background-image: url(../imagenes/ico/66.png) !important;
+		background-repeat:no-repeat !important;	
+}
+
+
+
+#B_twitter .ui-icon {
+	background:  url("../images/btn/t3.png") 50% 50% no-repeat ;
+	background-size: 22px 22px;
+}
+
+#popo  {
+	background-image: url("../images/btn/t3.png");
+	background-size: 100% 100%;
+}
+
+#centro_twitter {
+	width: 0 auto 0 auto;
+	padding: 11px;
+	text-align: center;
+	
+}
+#MENU #wea {
+	width: auto;
+	border: 1px solid #2B95D3;
+	/* [disabled]border-spacing: 2px 22px; */
+	border-collapse: collapse;
+}
+
+#banner img{
+    max-width: 100% ;
+    border-radius: 11px;    
+}
+#BOTONES img{
+    max-width: 100% ;
+    border-radius: 11px;
+	width: 70px;
+	height:70px;
+	alignment-adjust:central;
+    
+    
+}
+#Logo img{
+    max-width: 100%;
+	background: -webkit-linear-gradient(#105386,rgb(255, 255, 255)) !important;	
+	box-shadow:0px 0px 26px #000;
+    
+}
+
+
+/* letra blanca para los titulos de los menus solo AL ULTIMO elementos despues de #ITEM  */ 
+#DIV  div  {             
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.6) ;
+    box-shadow:0px 0px 56px #fff;
+    font-size: 14pt;
+    
+}
+
+
+
+
+
+/* div# #entryText p,h3,img,td,D_2 { contraste de las noticias  RRS 2  
+    background-color: rgba(255, 255, 255, 0.6) ;
+    box-shadow:0px 0px 56px #fff;
+    font-size: 14pt;
+} 
+*/
+
+
+/* #D_4 {    contraste de las noticias  RRS 2 
+    background-color: rgba(255, 255, 255, 0.6) ;
+    box-shadow:0px 0px 56px #fff;
+    font-size: 14pt;
+}
+ */
+
+
+
+ui.label {
+    
+    font-size: 19pt;
+
+}
+
+#tabla_pefil {
+    max-width: 100%;
+}
+
+
